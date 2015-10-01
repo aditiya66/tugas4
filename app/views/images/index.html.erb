@@ -18,6 +18,7 @@
 
 <%=image_tag image.avatar.url(:medium) , :class => 'img-rounded'%>
 <%end%>
+
 		
 		<h5><%= image.title %></h5>
 
@@ -41,3 +42,4 @@
 </div>
 
 </div>
+<%= link_to 'NEW' , image_path('new')%>
