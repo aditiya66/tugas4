@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require magni
 //= require bootstrap/bootstrap
 //= require bootstrap/jquery-1-11-1
 //= require_tree .

@@ -1,6 +1,6 @@
 class Image < ActiveRecord::Base
 
-  has_attached_file :avatar, styles: { medium: "200X100>", thumb: "100x200>" , large: "600x300>"} ,url: '/upload_images/:class/:attachment/000/000/:id/:style/:filename'
+  has_attached_file :avatar, styles: { small: "100x200", medium: "400x200>", thumb: "200x100>" , large: "600x300>"} ,url: '/upload_images/:class/:attachment/000/000/:id/:style/:filename'
     validates_attachment_size :avatar, :in => 0.kilobytes..200.kilobytes
 
     validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
