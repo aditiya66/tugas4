@@ -14,6 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require magni
+//= require masonry/jquery.masonry
+//= require masonry/jquery.event-drag
+//= require masonry/jquery.imagesloaded.min
+//= require masonry/jquery.infinitescroll.min
+//= require masonry/modernizr-transitions
 //= require bootstrap/bootstrap
 //= require bootstrap/jquery-1-11-1
+//= require masonry/box-maker
+//= require masonry/jquery.loremimages.min
+//= require jquery.turbolinks
 //= require_tree .
