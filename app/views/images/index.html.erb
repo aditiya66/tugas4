@@ -1,29 +1,30 @@
-
-<!--  <% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
-
-  <% end %> -->
-    <div id="mantap" class="transition-enabled">
+	
+	<% if flash[:notice] %>
+	<div class="notice"><%= flash[:notice] %></div>
+	<% end %>
+	
+	<h2 style="text-align: center;">Gallery</h2>
+	
+	<div id="mantap" class="transition-enabled">
 
 <% @images.each do |image|%>
 
-   <div class="box panel panel-default" >
-       <%=image_tag image.avatar.url()%>
-<div class="panel-body">
-       <h5><%= image.title%></h5>
-<p>
-    
-<%= image.descrip%>
-
-</p>
-<%= link_to 'Show', image_path(image.id)%>
-<%= link_to 'Edit' , edit_image_path(image.id)%>
-<%= link_to 'Remove' , image_path(image.id),method: "DELETE",data:{confirm: 'are you sure delete this data ?'} %>
-
-   </div>
-  </div>
-
-  <%end%></div>
-
-
+		<div class="box panel panel-default" >
+		<%=image_tag image.avatar.url()%>
+		<div class="panel-body">
+		<h4><strong><%= image.title%></strong></h4>
+		<hr/>
+		<p>
+		<%= image.descrip%>
+		</p>
+		
+	<%= link_to 'Show', image_path(image.id)%>
+	<%= link_to 'Edit' , edit_image_path(image.id)%>
+	<%= link_to 'Remove' , image_path(image.id),method: "DELETE",data:{confirm: 'are you sure delete this data ?'} %>
+	
+	</div>
+	</div>
+	<%end%></div>
+	
+	
 

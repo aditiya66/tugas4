@@ -16,3 +16,8 @@ margin: 5px;
 width: 100%;
 }
 
+.col-center{
+
+	float: none;
+	margin: 0 auto;
+}
