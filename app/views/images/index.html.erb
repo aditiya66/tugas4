@@ -15,9 +15,9 @@
 		<h4><strong><%= image.title%></strong></h4>
 		<hr/>
 		<p>
-		<%= image.descrip%>
+		<%= image.descrip.truncate(20)%>
 		</p>
-		
+
 	<%= link_to 'Show', image_path(image.id)%>
 	<%= link_to 'Edit' , edit_image_path(image.id)%>
 	<%= link_to 'Remove' , image_path(image.id),method: "DELETE",data:{confirm: 'are you sure delete this data ?'} %>
