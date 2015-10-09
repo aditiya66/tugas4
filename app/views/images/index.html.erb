@@ -6,11 +6,14 @@
 	<h2 style="text-align: center;">Gallery</h2>
 	
 	<div id="mantap" class="transition-enabled">
-
-<% @images.each do |image|%>
+	<% @images.each do |image|%>
 
 		<div class="box panel panel-default" >
+		
+		<%= link_to image_path(image.id) do %>
 		<%=image_tag image.avatar.url()%>
+		<%end%>
+
 		<div class="panel-body">
 		<h4><strong><%= image.title%></strong></h4>
 		<hr/>
@@ -18,7 +21,6 @@
 		<%= image.descrip.truncate(20)%>
 		</p>
 
-	<%= link_to 'Show', image_path(image.id)%>
 	<%= link_to 'Edit' , edit_image_path(image.id)%>
 	<%= link_to 'Remove' , image_path(image.id),method: "DELETE",data:{confirm: 'are you sure delete this data ?'} %>
 	
